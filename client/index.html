@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="hotelApp">
+<head>
+  <meta charset="UTF-8">
+  <title>HotelApp</title>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <script src="module.js"></script>
+  <script src="controllers/reservations/reservationsCtrl.js"></script>
+  <script src="controllers/clients/ClientsCtrl.js"></script>
+  <script src="controllers/priceoffers/PriceoffersCtrl.js"></script>
+  <script src="controllers/makeReservation/MakereservationCtrl.js"></script>
+  <script src="controllers/makePriceoffer/MakePriceofferCtrl.js"></script>
+  <script src="factories/reservationFactory.js"></script>
+  <script src="routes.js"></script>
+</head>
+<body class="col-md-8">
+  <h1>Warandehof</h1>
+  <ul class="nav nav-pills">
+    <li role="presentation">
+      <a ui-sref="makereservation">Make reservation</a>
+      <a ui-sref="makepriceoffer">Make price offer</a>
+      <a ui-sref="reservations">Reservations</a>
+      <a ui-sref="priceoffers">Price offers</a>
+    </li>
+  </ul>
+  <div ui-view></div>
+</body>
+</html>
