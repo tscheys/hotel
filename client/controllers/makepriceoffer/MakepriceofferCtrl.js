@@ -5,9 +5,9 @@
   .controller('MakepriceofferCtrl', MakepriceofferCtrl);
 
   function MakepriceofferCtrl() {
-    var self = this;
-
-    
+    var makepriceoffer = this;
+    makepriceoffer.createOffer = function () {
+      console.log('we got in here');
+    }
   }
-
 })();

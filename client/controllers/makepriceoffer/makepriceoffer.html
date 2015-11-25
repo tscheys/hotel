@@ -1,1 +1,37 @@
-<h1>Price offer</h1>
+<h1>Maak Prijsofferte</h1>
+<form ng-submit="makepriceoffer.createOffer()">
+  <div class="form-group">
+    <label for="NaamKlant">Klant</label>
+    <input type="text" class="form-control" id="NaamKlant" placeholder="Naam klant">
+  </div>
+  <div class="form-group">
+    <label for="nachten">Aantal nachten</label>
+    <input type="text" class="form-control" id="nachten" placeholder="Aantal nachten">
+  </div>
+  <div class="form-group">
+    <label for="volwkoppel">Volwassenen tweepersoonskamer</label>
+    <input type="text" class="form-control" id="volwkoppel" placeholder="Volwassenen tweepersoonskamer">
+  </div>
+  <div class="form-group">
+    <label for="volwfam">Volwassenen familiekamer</label>
+    <input type="text" class="form-control" id="volwfam" placeholder="Volwassenen familiekamer">
+  </div>
+  <div class="form-group">
+    <label for="ki12">Kinderen 12 jaar of jonger</label>
+    <input type="text" class="form-control" id="ki12" placeholder="Kinderen 12 jaar of jonger">
+  </div>
+  <div class="form-group">
+    <label for="ki6">Kinderen 6 jaar of jonger</label>
+    <input type="text" class="form-control" id="ki6" placeholder="Kinderen 6 jaar of jonger">
+  </div>
+  <div class="form-group">
+    <label for="babies">Aantal babies</label>
+    <input type="text" class="form-control" id="babies" placeholder="Aantal babies">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox">Gasten brengen eigen babybedje mee
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Maak prijsofferte</button>
+</form>
