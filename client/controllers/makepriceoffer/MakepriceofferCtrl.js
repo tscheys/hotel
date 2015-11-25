@@ -4,10 +4,14 @@
   angular.module('hotelApp')
   .controller('MakepriceofferCtrl', MakepriceofferCtrl);
 
-  function MakepriceofferCtrl() {
+  MakepriceofferCtrl.$inject = ['pdfFactory'];
+
+  function MakepriceofferCtrl(pdfFactory) {
     var makepriceoffer = this;
+    
     makepriceoffer.createOffer = function () {
-      console.log('we got in here');
+      console.log(makepriceoffer.naam);
+      pdfFactory.priceofferPdf(makepriceoffer);
     }
   }
 })();
