@@ -10,8 +10,21 @@
     var makepriceoffer = this;
     
     makepriceoffer.createOffer = function () {
-      console.log(makepriceoffer.naam);
-      pdfFactory.priceofferPdf(makepriceoffer);
+      var data = {
+        naam: makepriceoffer.naam,
+        nights: makepriceoffer.nachten,
+        persons: [{
+          title: 'Volwassenen in tweepersoonskamer',
+          number: makepriceoffer.volwkoppel,
+          price: 44
+         },
+         {
+          title: 'Volwassenen in familiekamer',
+          number: makepriceoffer.volwfam,
+          price: 41
+         }
+        ]};
+      pdfFactory.priceofferPdf(data);
     }
   }
 })();
