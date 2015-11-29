@@ -6,7 +6,8 @@
 
   function constantFactory() {
     var services = {
-      priceoffer: priceoffer
+      priceoffer: priceoffer,
+      quote: quote
     };
 
     return services;
@@ -44,6 +45,20 @@
         ]
       };
     }
+
+    function quote(guest) {
+      return {
+        name: guest.naam,
+        nights: guest.nachten,
+        babybed: guest.babybed,
+        adultCouple: guest.volwkoppel,
+        adultFamily: guest.volwfam,
+        kids12: guest.ki12,
+        kids6: guest.ki6,
+        babies: guest.babies
+      }
+    }
+
   }
 
 })();
