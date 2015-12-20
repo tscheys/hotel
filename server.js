@@ -23,6 +23,16 @@ app.post('/quote', function(req, res) {
   })
 });
 
+app.get('/quotes', function(req, res) {
+  Quotes.find({}, function (err, result) {
+    if(err) {
+      console.log(err);
+    } else {
+      res.json(result);
+    }
+  });
+});
+
 app.listen(8080);
 
 
