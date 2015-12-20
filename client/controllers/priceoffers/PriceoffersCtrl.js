@@ -12,15 +12,9 @@
     activate();
 
     function activate() {
-      serverFactory.getQuotes()
-      .then(function success(resp) {
-        priceoffers.quotes = resp.data;
-        console.log(priceoffers.quotes);
-      }, function error(resp) {
-        console.log(resp);
+      serverFactory.getQuotes(function(data) {
+        priceoffers.quotes = data;
       });
-    };
-    
+    }; 
   }
-
 })();

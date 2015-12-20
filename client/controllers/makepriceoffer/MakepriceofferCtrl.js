@@ -7,11 +7,11 @@
   MakepriceofferCtrl.$inject = ['pdfFactory', 'constantFactory', 'serverFactory'];
 
   function MakepriceofferCtrl(pdfFactory, constantFactory, serverFactory) {
-    var makepriceoffer = this;
+    var quote = this;
     
-    makepriceoffer.createOffer = function () {
-      pdfFactory.priceofferPdf(constantFactory.priceoffer(makepriceoffer));
-      serverFactory.saveQuote(constantFactory.quote(makepriceoffer));
+    quote.createOffer = function () {
+      pdfFactory.priceofferPdf(constantFactory.priceoffer(quote));
+      serverFactory.saveQuote(constantFactory.quote(quote));
     }
   }
 })();

@@ -24,7 +24,7 @@
         url: '/makepriceoffer',
         templateUrl: 'controllers/makepriceoffer/makepriceoffer.html',
         controller: 'MakepriceofferCtrl',
-        controllerAs: 'makepriceoffer',
+        controllerAs: 'quote',
         data: {
           title: 'Makepriceoffer'
         }

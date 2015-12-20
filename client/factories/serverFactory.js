@@ -20,21 +20,22 @@
         url: '/quote',
         data: data
       })
-      .then(function success(response) {
-        console.log(response);
-          // this callback will be called asynchronously
-          // when the response is available
-        }, function error(response) {
-          console.log(response);
-          // called asynchronously if an error occurs
-          // or server returns response with an error status.
-        });   
+      .then(function success(resp) {
+        console.log(resp);
+      })
+      .catch(function error(resp) {
+        throw resp;
+      });   
     }
 
-    function getQuotes() {
+    function getQuotes(callback) {
       return $http({
         method: 'GET',
         url: '/quotes'
+      }).then(function success(resp) {
+        callback(resp.data);
+      }, function error(resp) {
+        throw resp;
       })
     }
   }
