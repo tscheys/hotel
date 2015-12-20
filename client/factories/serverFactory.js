@@ -8,7 +8,7 @@
 
   function serverFactory($http) {
     var services = {
-      saveQuote: saveQuote
+      saveQuote: saveQuote,
       getQuotes: getQuotes
     };
 
