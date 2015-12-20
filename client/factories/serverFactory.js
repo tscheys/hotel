@@ -8,13 +8,13 @@
 
   function serverFactory($http) {
     var services = {
-      saveQuote: saveQuote
+      saveQuote: saveQuote,
+      getQuotes: getQuotes
     };
 
     return services;
 
     function saveQuote(data) {
-      console.log(data);
       return $http({
         method: 'POST',
         url: '/quote',
@@ -29,6 +29,13 @@
           // called asynchronously if an error occurs
           // or server returns response with an error status.
         });   
+    }
+
+    function getQuotes() {
+      return $http({
+        method: 'GET',
+        url: '/quotes'
+      })
     }
   }
 })();
