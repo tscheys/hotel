@@ -15,6 +15,6 @@
       serverFactory.getQuotes(function(data) {
         priceoffers.quotes = data;
       });
-    }; 
+    }
   }
 })();

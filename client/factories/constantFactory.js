@@ -56,7 +56,7 @@
         kids12: guest.ki12,
         kids6: guest.ki6,
         babies: guest.babies
-      }
+      };
     }
 
   }

@@ -12,6 +12,6 @@
     quote.createOffer = function () {
       pdfFactory.priceofferPdf(constantFactory.priceoffer(quote));
       serverFactory.saveQuote(constantFactory.quote(quote));
-    }
+    };
   }
 })();

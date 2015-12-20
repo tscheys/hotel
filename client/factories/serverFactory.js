@@ -36,7 +36,7 @@
         callback(resp.data);
       }, function error(resp) {
         throw resp;
-      })
+      });
     }
   }
 })();
