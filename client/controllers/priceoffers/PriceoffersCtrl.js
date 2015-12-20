@@ -7,13 +7,15 @@
   PriceoffersCtrl.$inject = ['serverFactory'];
 
   function PriceoffersCtrl(serverFactory) {
-    var self = this;
+    var priceoffers = this;
+    priceoffers.quotes = [];
+    activate();
 
-    function showQuotes() {
+    function activate() {
       serverFactory.getQuotes()
-      .then(function success(data) {
-        self.quotes = data;
-        console.log(data);
+      .then(function success(resp) {
+        priceoffers.quotes = resp.data;
+        console.log(priceoffers.quotes);
       }, function error(resp) {
         console.log(resp);
       });
