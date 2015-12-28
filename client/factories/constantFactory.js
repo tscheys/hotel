@@ -7,7 +7,8 @@
   function constantFactory() {
     var services = {
       priceoffer: priceoffer,
-      quote: quote
+      quote: quote,
+      priceform: priceform
     };
 
     return services;
@@ -59,6 +60,74 @@
       };
     }
 
+    function priceform() {
+      return [{
+        label: "NaamKlant",
+        model: "quote.naam",
+        type: "text",
+        placeholder: "Naam klant",
+        class: "form-control"
+      }, 
+      {
+        label: "nachten",
+        model: "quote.nachten",
+        type: "text",
+        placeholder: "Aantal nachten",
+        class: "form-control"
+      },
+      {
+        label: "volwfam",
+        model: "quote.volwfam",
+        type: "text",
+        placeholder: "Volwassenen familiekamer",
+        class: "form-control"
+      },
+      {
+        label: "volwkoppel",
+        model: "quote.volwkoppel",
+        type: "text",
+        placeholder: "Volwassenen koppel",
+        class: "form-control"
+      },
+      {
+        label: "ki12",
+        model: "quote.ki12",
+        type: "text",
+        placeholder: "Kinderen 12 jaar of jonger",
+        class: "form-control"
+      },
+      {
+        label: "ki6",
+        model: "quote.ki6",
+        type: "text",
+        placeholder: "Kinderen 6 jaar of jonger",
+        class: "form-control"
+      },
+      {
+        label: "ki6",
+        model: "quote.ki6",
+        type: "text",
+        placeholder: "Kinderen 6 jaar of jonger",
+        class: "form-control"
+      },
+      {
+        label: "babies",
+        model: "quote.babies",
+        type: "text",
+        placeholder: "Aantal babies",
+        class: "form-control"
+      },
+      {
+        label: "babies",
+        model: "quote.babybed",
+        type: "checkbox",
+        placeholder: "Aantal babies",
+        class: "checkbox"
+      }
+      ];
+    }
+
   }
 
 })();
+

@@ -9,9 +9,14 @@
   function MakepriceofferCtrl(pdfFactory, constantFactory, serverFactory) {
     var quote = this;
     
+    quote.fields = constantFactory.priceform();
+    
     quote.createOffer = function () {
+      console.log(quote);
       pdfFactory.priceofferPdf(constantFactory.priceoffer(quote));
       serverFactory.saveQuote(constantFactory.quote(quote));
     };
+
   }
 })();
+
