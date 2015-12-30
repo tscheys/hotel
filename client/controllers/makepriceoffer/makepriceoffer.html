@@ -1,37 +1,9 @@
 <h1>Maak Prijsofferte</h1>
-<form ng-submit="makepriceoffer.createOffer()">
-  <div class="form-group">
-    <label for="NaamKlant">Klant</label>
-    <input ng-model="makepriceoffer.naam" type="text" class="form-control" id="NaamKlant" placeholder="Naam klant">
-  </div>
-  <div class="form-group">
-    <label for="nachten">Aantal nachten</label>
-    <input ng-model="makepriceoffer.nachten" type="text" class="form-control" id="nachten" placeholder="Aantal nachten">
-  </div>
-  <div class="form-group">
-    <label for="volwkoppel">Volwassenen tweepersoonskamer</label>
-    <input ng-model="makepriceoffer.volwkoppel" type="text" class="form-control" id="volwkoppel" placeholder="Volwassenen tweepersoonskamer">
-  </div>
-  <div class="form-group">
-    <label for="volwfam">Volwassenen familiekamer</label>
-    <input ng-model="makepriceoffer.volwfam" type="text" class="form-control" id="volwfam" placeholder="Volwassenen familiekamer">
-  </div>
-  <div class="form-group">
-    <label for="ki12">Kinderen 12 jaar of jonger</label>
-    <input ng-model="makepriceoffer.ki12" type="text" class="form-control" id="ki12" placeholder="Kinderen 12 jaar of jonger">
-  </div>
-  <div class="form-group">
-    <label for="ki6">Kinderen 6 jaar of jonger</label>
-    <input ng-model="makepriceoffer.ki6" type="text" class="form-control" id="ki6" placeholder="Kinderen 6 jaar of jonger">
-  </div>
-  <div class="form-group">
-    <label for="babies">Aantal babies</label>
-    <input ng-model="makepriceoffer.babies" type="text" class="form-control" id="babies" placeholder="Aantal babies">
-  </div>
-  <div class="checkbox">
-    <label>
-      <input ng-model="makepriceoffer.babybed" type="checkbox">Gasten brengen eigen babybedje mee
-    </label>
+<form ng-submit="quote.createOffer()">
+  <div ng-repeat="field in quote.fields" class="form-group">
+    <label for="{{field.label}}">{{field.placeholder}}</label>
+    <input ng-bind="field.model" type="{{field.type}}" class="{{field.class}}" 
+    id="{{field.label}}" placeholder="{{field.placeholder}}">
   </div>
   <button type="submit" class="btn btn-default">Maak prijsofferte</button>
 </form>
